@@ -1,0 +1,17 @@
+from PIL import Image
+
+image = Image.open('levi.png')
+
+#image must be png
+
+import stepic
+data = b'''I found a related question right here on SO, but that question is about PHP though, and it states the b is used to indicate the string is binary, as opposed to Unicode, which was needed for code to be compatible from version of PHP < 6, when migrating to PHP 6. I don't think this applies to Python.
+
+I did find this documentation on the Python site about using a u character in the same syntax to specify a string as Unicode. Unfortunately, it doesn't mention the b character anywhere in that document.
+
+Also, just out of curiosity, are there more symbols than the b and u that do other things?'''
+image = stepic.encode(image,data)
+image.save('levi.png')
+image = Image.open('levi.png')
+
+steroimage = stepic.decode(image)
